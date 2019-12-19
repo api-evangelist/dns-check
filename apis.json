@@ -1,0 +1,61 @@
+{
+    "name": "DNS Check",
+    "description": "Monitor DNS records. Request DNS updates by sharing reports that show the pass\/fail status of each record. Troubleshoot DNS issues. DNS records are automatically re-checked, and reports updated. DNS records can be imported from a zone file, or added in...",
+    "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/18972-dns-check.jpg",
+    "tags": [
+        "api provider",
+        "api service provider",
+        "dns check",
+        "dns general",
+        "dns monitor",
+        "have api",
+        "monitoring",
+        "mx record check",
+        "relative data",
+        "service api",
+        "spf record check"
+    ],
+    "created": "2019-12-19",
+    "modified": "2019-12-19",
+    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/dns-check\/master\/apis.json",
+    "specificationVersion": "0.14",
+    "apis": [
+        {
+            "name": "DNS Record Group Monitoring API",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/18972-dns-check.jpg",
+            "humanURL": "https:\/\/www.dnscheck.co\/",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/dns-record-group-monitoring-api.json"
+                },
+                {
+                    "type": "x-postman-collecction",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/dns-record-group-monitoring-api-postman-collection.json"
+                }
+            ]
+        }
+    ],
+    "include": [],
+    "x-common": [
+        {
+            "type": "Developers",
+            "url": "https:\/\/www.dnscheck.co\/documentation"
+        },
+        {
+            "type": "Pricing",
+            "url": "https:\/\/www.dnscheck.co\/pricing"
+        },
+        {
+            "type": "Twitter",
+            "url": "https:\/\/twitter.com\/dns_check"
+        },
+        {
+            "type": "Website",
+            "url": "https:\/\/www.dnscheck.co\/"
+        }
+    ]
+}
