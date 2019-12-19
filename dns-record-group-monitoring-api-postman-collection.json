@@ -1,0 +1,51 @@
+{
+    "id": "d32a7a309f69b330c604bf7947514fb9",
+    "name": "DNS Record Group Monitoring API",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "23a8bd9a588e183fb50ca9ccf594c9bb",
+            "name": "Check Group",
+            "url": "httpswww.dnscheck.co\/api\/v1\/groups\/:group_uuid",
+            "description": "The DNS Check API is used to request data for either a specific record group, or all DNS record groups owned by your account.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "api_key",
+                    "description": "The secret key that's used to authenticate the connecting application. See the Generating an API Key page for details.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "group_uuid",
+                    "description": "The UUID of the DNS record group. When viewing a DNS record or record group, this is the 36-character string that follows \"\/tests\/\" in the URL. This DNS record group's UUID is \"ea883d67-d9f6-45e3-b3a1-844dd1857824\". Specify a group_uuid of \"all\" to show information for all of your account's DNS record groups",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "d32a7a309f69b330c604bf7947514fb9",
+            "rawModeData": ""
+        }
+    ]
+}
