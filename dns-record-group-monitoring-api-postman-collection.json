@@ -1,5 +1,5 @@
 {
-    "id": "d32a7a309f69b330c604bf7947514fb9",
+    "id": "29f07683d6237e87455061faf12819d0",
     "name": "DNS Record Group Monitoring API",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "23a8bd9a588e183fb50ca9ccf594c9bb",
+            "id": "19a27c82149799f7d1cd6711c8f94a14",
             "name": "Check Group",
             "url": "httpswww.dnscheck.co\/api\/v1\/groups\/:group_uuid",
             "description": "The DNS Check API is used to request data for either a specific record group, or all DNS record groups owned by your account.",
@@ -44,7 +44,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "d32a7a309f69b330c604bf7947514fb9",
+            "collectionId": "29f07683d6237e87455061faf12819d0",
             "rawModeData": ""
         }
     ]
