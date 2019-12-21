@@ -15,8 +15,8 @@
         "service api",
         "spf record check"
     ],
-    "created": "2019-12-19",
-    "modified": "2019-12-19",
+    "created": "2019-12-21",
+    "modified": "2019-12-21",
     "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/dns-check\/master\/apis.json",
     "specificationVersion": "0.14",
     "apis": [
@@ -30,17 +30,21 @@
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/dns-record-group-monitoring-api.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/dns-check\/master\/dns-record-group-monitoring-api-openapi.json"
                 },
                 {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/dns-record-group-monitoring-api-postman-collection.json"
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/dns-record-group-monitoring-api.json"
                 }
             ]
         }
     ],
     "include": [],
     "x-common": [
+        {
+            "type": "APIs.json",
+            "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/apis.json"
+        },
         {
             "type": "Developers",
             "url": "https:\/\/www.dnscheck.co\/documentation"
