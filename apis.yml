@@ -1,0 +1,64 @@
+aid: dns-check
+name: DNS Check
+description: >-
+  DNS Check is a domain DNS monitoring service that lets teams monitor, share,
+  and troubleshoot DNS records across multiple record types (A, AAAA, CNAME,
+  MX, NS, PTR, SOA, SPF, SRV, TXT). The platform detects unresponsive name
+  servers, incorrect IP addresses, missing or duplicated records, SPF record
+  problems, and out-of-sync name servers, with notifications when records
+  change or fail. The DNS Check REST API provides programmatic access to DNS
+  record and DNS record group monitoring using a 32-character API key passed
+  as a query parameter.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - DNS
+  - DNS Monitoring
+  - Domain Monitoring
+  - DNS Records
+  - Infrastructure Monitoring
+  - Networking
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/dns-check/refs/heads/main/apis.yml
+created: '2026-05-11'
+modified: '2026-05-11'
+specificationVersion: '0.19'
+apis:
+  - aid: dns-check:rest-api
+    name: DNS Check REST API
+    description: >-
+      RESTful JSON API for managing DNS record monitors and DNS record group
+      monitors at DNSCheck.co. All requests use GET and authenticate via a
+      32-character API key passed as the api_key query parameter; the API is
+      versioned in the URL path (v1).
+    humanURL: https://www.dnscheck.co/api
+    baseURL: https://www.dnscheck.co/api
+    tags:
+      - DNS
+      - DNS Monitoring
+      - DNS Records
+      - Domain Monitoring
+    properties:
+      - type: Documentation
+        url: https://www.dnscheck.co/api
+      - type: Authentication
+        url: https://www.dnscheck.co/api/generate-key
+      - type: DNS Record Monitoring
+        url: https://www.dnscheck.co/api/dns-record-monitoring
+      - type: DNS Record Group Monitoring
+        url: https://www.dnscheck.co/api/dns-record-group-monitoring
+
+common:
+  - type: Website
+    url: https://www.dnscheck.co
+  - type: Documentation
+    url: https://www.dnscheck.co/documentation
+  - type: API Documentation
+    url: https://www.dnscheck.co/api
+  - type: Pricing
+    url: https://www.dnscheck.co/pricing
+  - type: Sign Up
+    url: https://www.dnscheck.co/signup
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
