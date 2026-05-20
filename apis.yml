@@ -49,6 +49,8 @@ apis:
         url: https://www.dnscheck.co/api/dns-record-group-monitoring
 
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/dns-checker
   - type: Website
     url: https://www.dnscheck.co
   - type: Documentation
