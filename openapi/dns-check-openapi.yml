@@ -1,0 +1,60 @@
+openapi: 3.1.0
+info:
+  title: DNS Check API
+  description: >-
+    RESTful JSON API for DNS Check, a domain DNS monitoring service. The API
+    is read-only via HTTP GET and authenticates with a 32-character `api_key`
+    query parameter. It exposes endpoints for DNS record monitoring and DNS
+    record group monitoring across record types A, AAAA, ALIAS, CAA, CNAME,
+    MX, NS, PTR, SOA, SPF, SRV, and TXT.
+  version: "1.0"
+servers:
+  - url: https://www.dnscheck.co
+    description: DNS Check production
+security:
+  - apiKey: []
+tags:
+  - name: DNS Record Monitoring
+paths:
+  /api/v1/groups/{group_uuid}/{record_id}:
+    get:
+      tags: [DNS Record Monitoring]
+      summary: Get DNS record monitoring status
+      description: >-
+        Returns monitoring data for one record, all records in a group, or
+        all records across all groups. Use `all` for `group_uuid` to query
+        every group, and `all` for `record_id` to query every record in the
+        selected group.
+      operationId: getDnsRecordMonitoring
+      parameters:
+        - name: group_uuid
+          in: path
+          required: true
+          description: 36-character group UUID, or `all` for every group
+          schema:
+            type: string
+        - name: record_id
+          in: path
+          required: true
+          description: Integer DNS record ID, or `all` for every record
+          schema:
+            type: string
+        - name: api_key
+          in: query
+          required: true
+          description: 32-character DNS Check API key
+          schema:
+            type: string
+      responses:
+        '200':
+          description: DNS record monitoring data
+          content:
+            application/json:
+              schema:
+                type: object
+components:
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: query
+      name: api_key
