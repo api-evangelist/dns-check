@@ -49,6 +49,10 @@ apis:
         url: https://www.dnscheck.co/api/dns-record-group-monitoring
 
 common:
+  - type: DomainSecurity
+    url: security/dns-check-domain-security.yml
+  - type: Authentication
+    url: authentication/dns-check-authentication.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/dns-checker
   - type: Website
