@@ -10,7 +10,19 @@ description: >-
   record and DNS record group monitoring using a 32-character API key passed
   as a query parameter.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/dns-check.png
 tags:
   - DNS
   - DNS Monitoring
@@ -24,30 +36,38 @@ created: '2026-05-11'
 modified: '2026-05-11'
 specificationVersion: '0.19'
 apis:
-  - aid: dns-check:rest-api
-    name: DNS Check REST API
-    description: >-
-      RESTful JSON API for managing DNS record monitors and DNS record group
-      monitors at DNSCheck.co. All requests use GET and authenticate via a
-      32-character API key passed as the api_key query parameter; the API is
-      versioned in the URL path (v1).
-    humanURL: https://www.dnscheck.co/api
-    baseURL: https://www.dnscheck.co/api
-    tags:
-      - DNS
-      - DNS Monitoring
-      - DNS Records
-      - Domain Monitoring
-    properties:
-      - type: Documentation
-        url: https://www.dnscheck.co/api
-      - type: Authentication
-        url: https://www.dnscheck.co/api/generate-key
-      - type: DNS Record Monitoring
-        url: https://www.dnscheck.co/api/dns-record-monitoring
-      - type: DNS Record Group Monitoring
-        url: https://www.dnscheck.co/api/dns-record-group-monitoring
-
+- aid: dns-check:rest-api
+  name: DNS Check REST API
+  description: >-
+    RESTful JSON API for managing DNS record monitors and DNS record group monitors at DNSCheck.co. All
+    requests use GET and authenticate via a 32-character API key passed as the api_key query parameter;
+    the API is versioned in the URL path (v1).
+  humanURL: https://www.dnscheck.co/api
+  baseURL: https://www.dnscheck.co/api
+  tags:
+  - DNS
+  - DNS Monitoring
+  - DNS Records
+  - Domain Monitoring
+  properties:
+  - type: Documentation
+    url: https://www.dnscheck.co/api
+  - type: Authentication
+    url: https://www.dnscheck.co/api/generate-key
+  - type: DNS Record Monitoring
+    url: https://www.dnscheck.co/api/dns-record-monitoring
+  - type: DNS Record Group Monitoring
+    url: https://www.dnscheck.co/api/dns-record-group-monitoring
+- aid: dns-check:dns-check-dns-record-monitoring-api
+  name: DNS Check DNS Record Monitoring API
+  description: The DNS Record Monitoring API from DNS Check — 1 operation(s) for dns record monitoring.
+  humanURL: https://www.dnscheck.co/api
+  baseURL: https://www.dnscheck.co/api
+  tags:
+  - DNS Record Monitoring
+  properties:
+  - type: OpenAPI
+    url: openapi/dns-check-dns-record-monitoring-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/dns-check-agentic-access.yml
