@@ -1,0 +1,14 @@
+{
+  "provider": "dns-check",
+  "sources": [
+    "dns-check-dns-record-monitoring-api-openapi.yml"
+  ],
+  "outputs": [
+    "dns-check-dns-record-monitoring-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
