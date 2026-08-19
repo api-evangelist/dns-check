@@ -1,0 +1,173 @@
+{
+  "item": [
+    {
+      "id": "69aa33f6-d436-477f-a98e-e9f8eace66bd",
+      "name": "DNS Record Monitoring",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "9227dc0a-1007-4888-897b-8a0b63cb1ab1",
+          "name": "Get DNS record monitoring status",
+          "request": {
+            "name": "Get DNS record monitoring status",
+            "description": {
+              "content": "Returns monitoring data for one record, all records in a group, or all records across all groups. Use `all` for `group_uuid` to query every group, and `all` for `record_id` to query every record in the selected group.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "groups",
+                ":group_uuid",
+                ":record_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api_key",
+                  "value": "<string>",
+                  "description": "(Required) 32-character DNS Check API key"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "group_uuid",
+                  "description": "(Required) 36-character group UUID, or `all` for every group"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "record_id",
+                  "description": "(Required) Integer DNS record ID, or `all` for every record"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "41f35b2c-bc19-424a-8b1e-9986e5fef992",
+              "name": "DNS record monitoring data",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "groups",
+                    ":group_uuid",
+                    ":record_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "group_uuid",
+                      "description": "(Required) 36-character group UUID, or `all` for every group"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "record_id",
+                      "description": "(Required) Integer DNS record ID, or `all` for every record"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://www.dnscheck.co",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "api_key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "f82a22ce-1f94-434d-9e68-44e612cb36d1",
+    "name": "DNS Check DNS Record Monitoring API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "RESTful JSON API for DNS Check, a domain DNS monitoring service. The API is read-only via HTTP GET and authenticates with a 32-character `api_key` query parameter. It exposes endpoints for DNS record monitoring and DNS record group monitoring across record types A, AAAA, ALIAS, CAA, CNAME, MX, NS, PTR, SOA, SPF, SRV, and TXT.",
+      "type": "text/plain"
+    }
+  }
+}
