@@ -81,6 +81,9 @@ apis:
   - type: OpenAPI
     url: openapi/dns-check-dns-record-monitoring-api-openapi.yml
 common:
+  - type: CapabilityMap
+    url: capabilities/dns-check-capability-edges.yml
+    name: DNS Check Business Capability Map
   - type: AgenticAccess
     url: agentic-access/dns-check-agentic-access.yml
   - type: DomainSecurity
