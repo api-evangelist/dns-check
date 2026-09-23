@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: DNS Check DNS Record Monitoring API
   description: RESTful JSON API for DNS Check, a domain DNS monitoring service. The API is read-only via HTTP GET and authenticates with a 32-character `api_key` query parameter. It exposes endpoints for DNS record monitoring and DNS record group monitoring across record types A, AAAA, ALIAS, CAA, CNAME, MX, NS, PTR, SOA, SPF, SRV, and TXT.
