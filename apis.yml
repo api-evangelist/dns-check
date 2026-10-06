@@ -46,7 +46,7 @@ tags:
 url: >-
   https://raw.githubusercontent.com/api-evangelist/dns-check/refs/heads/main/apis.yml
 created: '2026-05-11'
-modified: '2026-05-11'
+modified: '2026-10-06'
 specificationVersion: '0.23'
 apis:
 - aid: dns-check:rest-api
@@ -82,6 +82,10 @@ apis:
   - type: OpenAPI
     url: openapi/dns-check-dns-record-monitoring-api-openapi.yml
 common:
+  - url: https://www.dnscheck.co/blog/
+    type: Blog
+  - url: https://www.dnscheck.co/blog/feed.xml
+    type: BlogRSS
   - type: CapabilityMap
     url: capabilities/dns-check-capability-edges.yml
     name: DNS Check Business Capability Map
