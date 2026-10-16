@@ -1,0 +1,21 @@
+{
+  "repo": "dns-check",
+  "feeds": [
+    {
+      "source": "https://www.dnscheck.co/blog/",
+      "feed_url": "https://www.dnscheck.co/blog/feed.xml",
+      "title": "",
+      "saved": 1,
+      "method": "discovered"
+    },
+    {
+      "source": "https://www.dnscheck.co/blog/feed.xml",
+      "feed_url": "https://www.dnscheck.co/blog/feed.xml",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    }
+  ],
+  "post_count": 1,
+  "fetched": "2026-10-10T13:15:00Z"
+}
