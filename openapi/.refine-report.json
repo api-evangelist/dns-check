@@ -1,20 +1,23 @@
 {
   "provider": "dns-check",
   "sources": [
-    "_original/dns-check-openapi.yml"
+    "_original/dns-check-openapi.json"
   ],
   "outputs": [
-    "dns-check-dns-record-monitoring-api-openapi.yml"
+    "dns-check-groups-api-openapi.yml"
   ],
   "archived": [],
   "errors": [],
   "warnings": [],
   "notes": [
     "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
-    "dns-check-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "apis.yml register: already-registered"
+    "dns-check-openapi.json: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "dns-check-openapi.json: tagged paths GET /groups/all -> Groups",
+    "dns-check-openapi.json: tagged paths GET /groups/{group_uuid} -> Groups",
+    "dns-check-openapi.json: tagged paths GET /groups/{group_uuid}/all -> Groups",
+    "dns-check-openapi.json: tagged paths GET /groups/{group_uuid}/{record_id} -> Groups",
+    "dns-check-openapi.json: declared missing tag: Groups",
+    "apis.yml register: written (+1 apis, 2 total)"
   ],
-  "skipped": [
-    "dns-check-dns-record-monitoring-api-openapi.yml: previously refined output, superseded by openapi/_original/"
-  ]
+  "skipped": []
 }

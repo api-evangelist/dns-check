@@ -71,16 +71,16 @@ apis:
     url: https://www.dnscheck.co/api/dns-record-monitoring
   - type: DNS Record Group Monitoring
     url: https://www.dnscheck.co/api/dns-record-group-monitoring
-- aid: dns-check:dns-check-dns-record-monitoring-api
-  name: DNS Check DNS Record Monitoring API
-  description: The DNS Record Monitoring API from DNS Check — 1 operation(s) for dns record monitoring.
+- aid: dns-check:dns-check-groups-api
+  name: DNS Check Groups API
+  description: The Groups API from DNS Check — 4 operation(s) for groups.
   humanURL: https://www.dnscheck.co/api
   baseURL: https://www.dnscheck.co/api
   tags:
-  - DNS Record Monitoring
+  - Groups
   properties:
   - type: OpenAPI
-    url: openapi/dns-check-dns-record-monitoring-api-openapi.yml
+    url: openapi/dns-check-groups-api-openapi.yml
 common:
   - url: https://www.dnscheck.co/blog/
     type: Blog

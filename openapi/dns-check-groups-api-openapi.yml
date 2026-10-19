@@ -1,0 +1,251 @@
+openapi: 3.2.0
+info:
+  title: DNS Check Groups API
+  version: '1'
+  description: Read the pass/fail status of DNS record groups and the DNS records in them. The example record group (ea883d67-d9f6-45e3-b3a1-844dd1857824) can be read without an API key.
+  contact:
+    url: https://www.dnscheck.co/contact
+servers:
+- url: https://www.dnscheck.co/api/v1
+security:
+- api_key: []
+tags:
+- name: Groups
+paths:
+  /groups/all:
+    get:
+      operationId: listGroups
+      summary: List every DNS record group in your account
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  groups:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Group'
+        '401':
+          description: Missing or invalid API key
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      tags:
+      - Groups
+  /groups/{group_uuid}:
+    get:
+      operationId: getGroup
+      summary: Get one DNS record group
+      parameters:
+      - $ref: '#/components/parameters/group_uuid'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  group:
+                    $ref: '#/components/schemas/Group'
+        '401':
+          description: Missing or invalid API key
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      tags:
+      - Groups
+  /groups/{group_uuid}/all:
+    get:
+      operationId: listDnsRecords
+      summary: List the DNS records in a record group
+      parameters:
+      - $ref: '#/components/parameters/group_uuid'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  dns_records:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/DnsRecord'
+        '401':
+          description: Missing or invalid API key
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      tags:
+      - Groups
+  /groups/{group_uuid}/{record_id}:
+    get:
+      operationId: getDnsRecord
+      summary: Get one DNS record in a record group
+      parameters:
+      - $ref: '#/components/parameters/group_uuid'
+      - $ref: '#/components/parameters/record_id'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  dns_record:
+                    $ref: '#/components/schemas/DnsRecord'
+        '401':
+          description: Missing or invalid API key
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      tags:
+      - Groups
+components:
+  schemas:
+    Error:
+      type: string
+      examples:
+      - Unauthorized
+    DnsRecord:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+          description: Fully qualified, with a trailing dot
+        record_type:
+          type: string
+          examples:
+          - A
+          - MX
+          - TXT
+        value:
+          type:
+          - string
+          - 'null'
+        exclusive:
+          type:
+          - boolean
+          - 'null'
+        invert:
+          type:
+          - boolean
+          - 'null'
+        fail_count:
+          type:
+          - integer
+          - 'null'
+          description: How many consecutive checks have failed
+        created_at:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        updated_at:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        status:
+          type: string
+          enum:
+          - pass
+          - fail
+          - unknown
+          description: The pass/fail status
+        url:
+          type: string
+          format: uri
+    Group:
+      type: object
+      properties:
+        uuid:
+          type: string
+          format: uuid
+        name:
+          type: string
+        description:
+          type:
+          - string
+          - 'null'
+        nameservers:
+          type:
+          - string
+          - 'null'
+          description: Comma delimited name servers to query. Blank means DNS Check's default name servers.
+        public:
+          type: boolean
+        notifications:
+          type: boolean
+        created_at:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        updated_at:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        status:
+          type: string
+          enum:
+          - pass
+          - fail
+          - unknown
+          description: The pass/fail status
+        url:
+          type: string
+          format: uri
+  parameters:
+    group_uuid:
+      name: group_uuid
+      in: path
+      required: true
+      description: The record group's UUID
+      schema:
+        type: string
+        format: uuid
+    record_id:
+      name: record_id
+      in: path
+      required: true
+      description: The DNS record's ID
+      schema:
+        type: integer
+  securitySchemes:
+    api_key:
+      type: apiKey
+      in: query
+      name: api_key

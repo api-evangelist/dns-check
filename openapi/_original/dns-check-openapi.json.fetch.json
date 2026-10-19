@@ -1,0 +1,12 @@
+{
+ "url": "https://www.dnscheck.co/api/v1/openapi.json",
+ "final": "https://www.dnscheck.co/api/v1/openapi.json",
+ "status": 200,
+ "content_type": "application/json; charset=utf-8",
+ "bytes": 9199,
+ "sha256": "969d723cb50a1087e41a8bf8f06e1cda74d6cf9ac37f4148b2451b938c4300bf",
+ "fetched_at": "2026-10-19",
+ "fetched_by": "APIEvangelist-Harvest/1.0 (+https://apievangelist.com)",
+ "match": "byte-identical",
+ "note": "re-archived: the provider's current document replaced a stale archive (roadmap#793); the old files are in openapi/_superseded/2026-10-19-stale"
+}
