@@ -1,4 +1,4 @@
-# DNS Check (dns-check)
+# DNS Check
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,61 +66,99 @@
 
 DNS Check is a domain DNS monitoring service that lets teams monitor, share, and troubleshoot DNS records across multiple record types (A, AAAA, CNAME, MX, NS, PTR, SOA, SPF, SRV, TXT). The platform detects unresponsive name servers, incorrect IP addresses, missing or duplicated records, SPF record problems, and out-of-sync name servers, with notifications when records change or fail. The DNS Check REST API provides programmatic access to DNS record and DNS record group monitoring using a 32-character API key passed as a query parameter.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/dns-check/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/dns-check/refs/heads/main/apis.yml)
+**Areas:** DNS · DNS Monitoring · Domain Monitoring · DNS Records · Infrastructure Monitoring · Networking
 
-## Scope
+## DNS Check on APIs.io
 
-- **Type:** Index
+Everything profiled for DNS Check is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/dns-check/](https://apis.io/providers/dns-check/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (2)
 
-- DNS
-- DNS Monitoring
-- Domain Monitoring
-- DNS Records
-- Infrastructure Monitoring
-- Networking
+- [DNS Check REST API](https://apis.io/apis/dns-check/rest-api/) — RESTful JSON API for managing DNS record monitors and DNS record group monitors at DNSCheck.co. All requests use GET and authenticate via a 32-character API…
+- [DNS Check DNS Record Monitoring API](https://apis.io/apis/dns-check/dns-check-dns-record-monitoring-api/) — The DNS Record Monitoring API from DNS Check — 1 operation(s) for dns record monitoring.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-05-11
-- **Modified:** 2026-05-11
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### DNS Check REST API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-RESTful JSON API for managing DNS record monitors and DNS record group monitors at DNSCheck.co. All requests use GET and authenticate via a 32-character API key passed as the api_key query parameter; the API is versioned in the URL path (v1).
+- [Dns Check Agentic Access](https://apis.io/agentic-access/dns-check/dns-check-agentic-access/)
 
-- **Human URL:** [https://www.dnscheck.co/api](https://www.dnscheck.co/api)
-- **Base URL:** `https://www.dnscheck.co/api`
+#### Collections (2)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- DNS
-- DNS Monitoring
-- DNS Records
-- Domain Monitoring
+- [DNS Check API](https://apis.io/collections/dns-check/open-dns-check/)
+- [DNS Check DNS Record Monitoring API](https://apis.io/collections/dns-check/open-dns-check-dns-record-monitoring-api/)
 
-#### Properties
+#### Security (2)
 
-- [Documentation](https://www.dnscheck.co/api)
-- [Authentication](https://www.dnscheck.co/api/generate-key)
-- [D N S  Record  Monitoring](https://www.dnscheck.co/api/dns-record-monitoring)
-- [D N S  Record  Group  Monitoring](https://www.dnscheck.co/api/dns-record-group-monitoring)
-- [Postman Collection](collections/dns-check.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/dns-check.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-## Common Properties
+- [Dns Check Authentication](https://apis.io/security/dns-check/dns-check-authentication/)
+- [Dns Check Domain Security](https://apis.io/security/dns-check/dns-check-domain-security/)
 
-- [LinkedIn](https://www.linkedin.com/company/dns-checker)
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://www.dnscheck.co)
 - [Documentation](https://www.dnscheck.co/documentation)
-- [A P I  Documentation](https://www.dnscheck.co/api)
 - [Pricing](https://www.dnscheck.co/pricing)
-- [Sign Up](https://www.dnscheck.co/signup)
+- [Blog](https://www.dnscheck.co/blog/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 28.2** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 44.7 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 31.0 |
+| Access clarity | 23.7 |
+
+**Agent readiness 20.0** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | na |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 11.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/dns-check/](https://apis.io/providers/dns-check/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for DNS Check: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/dns-check/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
